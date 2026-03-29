@@ -2,6 +2,10 @@
 
 Веб-клиент Telegram на React с использованием TDLib.
 
+## 🌐 Онлайн демо
+
+**https://devdox-del.github.io/Housexgram-Beta/**
+
 ## 🚀 Быстрый старт
 
 ### 1. Установка зависимостей
@@ -67,6 +71,8 @@ npm run build
 │   ├── Utils/           # Утилиты
 │   ├── Resources/       # Ресурсы локализации
 │   └── Assets/          # Изображения, иконки
+├── .github/
+│   └── workflows/       # GitHub Actions для деплоя
 ├── .env                 # Переменные окружения
 └── package.json         # Зависимости
 ```
@@ -80,6 +86,24 @@ npm run build
 | `npm run test` | Запуск тестов |
 | `npm run deploy` | Деплой на GitHub Pages |
 | `npm run stats` | Анализ размера бандла |
+
+## 🌐 Публикация на GitHub Pages
+
+### Автоматический деплой (рекомендуется)
+
+1. Настройте GitHub Secrets в репозитории:
+   - `TELEGRAM_API_ID` = ваш API ID
+   - `TELEGRAM_API_HASH` = ваш API Hash
+
+2. После каждого пуша в ветку `main` сайт автоматически обновится
+
+### Ручной деплой
+
+```bash
+npm run deploy
+```
+
+Подробная инструкция в файле [DEPLOY.md](DEPLOY.md)
 
 ## ⚠️ Важно
 
