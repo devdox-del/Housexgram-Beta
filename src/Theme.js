@@ -201,7 +201,7 @@ function getSystemThemeType() {
     return 'light';
 }
 
-function createTheme(type, primary) {
+function createAppTheme(type, primary) {
     if (type === 'default') {
         type = getSystemThemeType();
     }
@@ -343,7 +343,7 @@ function withTheme(WrappedComponent) {
                     primary = themeOptions.primary;
                 }
             } catch {}
-            const theme = createTheme(type, primary);
+            const theme = createAppTheme(type, primary);
 
             this.state = { theme };
 
@@ -364,7 +364,7 @@ function withTheme(WrappedComponent) {
                 primary = themeOptions.primary;
             } catch {}
 
-            const theme = createTheme(type, primary);
+            const theme = createAppTheme(type, primary);
             this.setState({ theme }, () => AppStore.emit('clientUpdateThemeChange'));
         };
 
@@ -379,7 +379,7 @@ function withTheme(WrappedComponent) {
         onClientUpdateThemeChanging = update => {
             const { type, primary } = update;
 
-            const theme = createTheme(type, primary);
+            const theme = createAppTheme(type, primary);
             localStorage.setItem('themeOptions', JSON.stringify({ type, primary }));
 
             this.setState({ theme }, () => AppStore.emit('clientUpdateThemeChange'));
