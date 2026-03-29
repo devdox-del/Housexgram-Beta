@@ -1,7 +1,7 @@
 {
-  "homepage": "https://evgeny-nadymov.github.io/telegram-react",
-  "name": "telegram_react",
-  "version": "0.1.0",
+  "homepage": "https://devdox-del.github.io/Housexgram-Beta",
+  "name": "housegram_beta",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.9.7",
