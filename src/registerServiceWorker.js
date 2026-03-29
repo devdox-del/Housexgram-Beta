@@ -41,6 +41,8 @@ const isLocalhost =
 
 export default async function register() {
     console.log('[SW] Register');
+    // Отключено: старый service worker не совместим с новой версией
+    return;
 
     if (OPTIMIZATIONS_FIRST_START) {
         const { useTestDC } = TdLibController.parameters;
