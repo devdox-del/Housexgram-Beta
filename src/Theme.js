@@ -7,7 +7,7 @@
 
 import React from 'react';
 import blue from '@material-ui/core/colors/blue';
-import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
+import { createTheme } from '@material-ui/core/styles';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import { StylesProvider } from '@material-ui/core/styles';
 import { getBadgeSelectedColor } from './Utils/Color';
@@ -233,7 +233,7 @@ function createTheme(type, primary) {
         };
     }
 
-    const theme = createMuiTheme({
+    const theme = createTheme({
         palette: {
             type: type,
             primary: primary,
